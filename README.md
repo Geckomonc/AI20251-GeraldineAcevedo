@@ -4,4 +4,4 @@ Modelo para la competencia Kaggle [https://www.kaggle.com/competitions/pkdd-15-p
 - Geraldine Acevedo Restrepo 1036689211 Ingenieria de Sistemas
 
 ## Entregas
-- [Fase-1)
+- [Fase-1]
