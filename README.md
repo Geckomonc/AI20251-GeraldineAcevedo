@@ -12,4 +12,6 @@ Fase-1:
 5. Subir el .zip que has descargado del link del punto 1 a la parte de archivos de colab, en la carpeta content. (Si no lo haces de esta forma no va a funcionar)
    ![image](https://github.com/user-attachments/assets/180785c3-b5e0-408d-8a20-927d6a24f7f4)
 6. Cuando haya terminado de cargar el .zip en la carpeta, proceder a correr los códigos de colab de arriba hacia abajo. (Es importante seguir este orden)
+7. El resto de información se encuentran dentro del colab, tanto las descripciones de lo que hace cada celda de código como para que sirve cada paso.
+8. Cuando hayas corrido todas las lineas se generará la predicción para Kaggle en la carpeta content y se llamará submission.csv
 
