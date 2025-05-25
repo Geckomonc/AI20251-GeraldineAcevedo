@@ -57,7 +57,7 @@ Paso a paso para ejecutar el proyecto:
    comando: docker run -it kaggle_model
    
    ```
-   comando: docker run -it kaggle_model
+   docker run -it kaggle_model
    ```
    ![image](https://github.com/user-attachments/assets/09388966-f84c-47f6-adf3-745068302e55)
 
@@ -109,7 +109,7 @@ Y el container en docker los files se verán así:
 
 ![image](https://github.com/user-attachments/assets/993683ce-7ad0-4a4c-a678-97d0c491b69b)
 
-Y en los logs del container de docke tendremos una salida similar a la de la terminal
+Y en los logs del container de docker tendremos una salida similar a la de la terminal
 
 ![image](https://github.com/user-attachments/assets/4d3f4875-f614-47c4-9e59-4003edb442fe)
 
