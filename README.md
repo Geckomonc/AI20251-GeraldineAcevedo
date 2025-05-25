@@ -27,7 +27,7 @@ Tenemos la carpeta scripts que contiene los scripts:
 - predict.py : Este script se encarga de hacer las predicciones.
 - evaluation.py  : Carga las predicciones y los valores reales desde archivos CSV, compara si cada par de predicción y valor real son "casi iguales" (dentro de una tolerancia), imprime la precisión como promedio de aciertos por fila.
 
-Tenemos el archivo dockerfile que me permite construir la imagen docker para el proyecto.
+Tenemos el archivo dockerfile que me permite construir la imagen docker para el proyecto, este archivo contiene:
 - Tenga Python 3.11.
 - Instale todas las dependencias necesarias.
 - Copie el código y datos.
