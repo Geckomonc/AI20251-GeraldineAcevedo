@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar scripts y archivos relevantes
 COPY scripts/ scripts/
 COPY *.csv ./
+COPY kaggle.json /root/.config/kaggle/kaggle.json
 
 # Comando por defecto
 CMD ["bash"]
