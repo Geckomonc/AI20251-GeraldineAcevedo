@@ -6,22 +6,20 @@ Modelo para la competencia Kaggle [https://www.kaggle.com/competitions/pkdd-15-p
 ## Entregas
 
 ### Fase-1:
-1. Abrir el archivo fase-1.ipynb en colab
-1. Guardar la key de kaggle llamada kaggle.json (Es la que te permite autentificarte y descargar la información del modelo) en la carpeta de archivos de colab.
+1. Abrir el archivo fase-1.ipynb en colab que se encuentra en la carpeta fase-1.
+2. Guardar la key de kaggle llamada kaggle.json (Es la que te permite autentificarte y descargar la información del modelo) en la carpeta de archivos de colab.
 
    ![image](https://github.com/user-attachments/assets/403e93af-9514-4cbf-8c4b-793ea7b01709)
 
-2. Correr los códigos de colab de arriba hacia abajo. (Es importante seguir este orden)
-3. El resto de información se encuentran dentro del colab, tanto las descripciones de lo que hace cada celda de código como para que sirve cada paso.
-4. Cuando hayas corrido todas las lineas se generará la predicción para Kaggle en la carpeta content y se llamará submission.csv
+3. Correr los códigos de colab de arriba hacia abajo. (Es importante seguir este orden)
+4. El resto de información se encuentran dentro del colab, tanto las descripciones de lo que hace cada celda de código como para que sirve cada paso.
+5. Cuando hayas corrido todas las lineas se generará la predicción para Kaggle en la carpeta content y se llamará submission.csv
 
 
 ### Fase-2:
-Contenido del repositorio:
+Contenido de la carpeta fase-2:
 
 ![image](https://github.com/user-attachments/assets/a8f2d06e-7773-4ff7-9833-cbcb3e407de1)
-
-NOTA: El archivo fase-1.pynb se encuentra en la carpeta por ser de la primera entrega pero no aporta ni quita nada para el funcionamiento de esta entrega cuando hablamos del funcionamiento.
 
 Tenemos la carpeta scripts que contiene los scripts:
 - model.py  : Este script realiza lo que pasa en la primera entrega (preparación de datos).
