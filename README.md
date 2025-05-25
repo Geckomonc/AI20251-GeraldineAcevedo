@@ -27,12 +27,12 @@ Contenido del repositorio:
 NOTA: El archivo fase-1.pynb se encuentra en la carpeta por ser de la primera entrega pero no aporta ni quita nada para el funcionamiento de esta entrega cuando hablamos del funcionamiento.
 
 Tenemos la carpeta scripts que contiene los scripts:
-- model.py  : Este script realiza lo que pasa en la primera entrega (preparación de datos, uso del modelo escogido y evaluación de modelo).
+- model.py  : Este script realiza lo que pasa en la primera entrega (preparación de datos).
 - train.py  : Este script se encarga de entrenar los datos del modelo.
 - predict.py : Este script se encarga de hacer las predicciones.
 - evaluation.py  : Carga las predicciones y los valores reales desde archivos CSV, compara si cada par de predicción y valor real son "casi iguales" (dentro de una tolerancia), imprime la precisión como promedio de aciertos por fila.
 
-Tenemos el archivo dockerfile que me permite construir la imagen docker para el proyecto, este archivo contiene:
+Tenemos el archivo dockerfile que me permite construir la imagen docker para el proyecto, con:
 - Python 3.11.
 - Todas las dependencias necesarias.
 - Scripts (model.py, predict.py, evaluation.py, etc.) dentro del contenedor.
@@ -59,14 +59,13 @@ NOTA: La key debe llamarse exactamente como se ve en la imagen
    ![image](https://github.com/user-attachments/assets/b04d4353-df78-4834-98f2-eb42fe220acf)
 
 4. Luego utilizar el comando que nos permitira ejecutar un contenedor interactivo desde la imagen que hemos construido (kaggle_model)
-   comando: docker run -it kaggle_model
    
    ```
    docker run -it kaggle_model
    ```
    ![image](https://github.com/user-attachments/assets/09388966-f84c-47f6-adf3-745068302e55)
 
-5. Al entrar al contenedor ejecutaremos el script que se encargara de correr el modelo predictivo
+5. Al entrar al contenedor ejecutaremos el script que se encargara de correr la preparación de datos del modelo
    
    ```
    python3 scripts/model.py
@@ -95,7 +94,7 @@ NOTA: La key debe llamarse exactamente como se ve en la imagen
    ![image](https://github.com/user-attachments/assets/64740d77-209c-4c7a-976d-91937ec14a48)
 
 
-8. Ejecutaremos el script:python3 scripts/evaluation.py
+8. Ejecutaremos el script:
 
    ```
    python3 scripts/evaluation.py
@@ -110,11 +109,11 @@ Finalmente por consola deberas tener en la terminal:
 
 ![image](https://github.com/user-attachments/assets/5b67d0fb-373d-46a5-9ded-a8bc57b8f5cf)
 
-Y el container en docker los files se verán así:
+Los archivos finales en el container se verán así:
 
 ![image](https://github.com/user-attachments/assets/993683ce-7ad0-4a4c-a678-97d0c491b69b)
 
-Y en los logs del container de docker tendremos una salida similar a la de la terminal
+Y en los logs del Docker Desktop del container de docker tendremos una salida similar a la de la terminal
 
 ![image](https://github.com/user-attachments/assets/4d3f4875-f614-47c4-9e59-4003edb442fe)
 
