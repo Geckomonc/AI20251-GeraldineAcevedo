@@ -1,6 +1,0 @@
-Flask
-loguru
-numpy
-pandas
-scikit-learn
-kaggle
