@@ -19,7 +19,7 @@ Modelo para la competencia Kaggle [https://www.kaggle.com/competitions/pkdd-15-p
 ### Fase-2:
 Contenido de la carpeta fase-2:
 
-![image](https://github.com/user-attachments/assets/6be967e3-c3f5-4286-9f83-1999d26ee0ed)
+![image](https://github.com/user-attachments/assets/41659755-a864-4e95-bb50-18c71f4efc86)
 
 Tenemos la carpeta scripts que contiene los scripts:
 - model.py  : Este script realiza lo que pasa en la primera entrega (preparación de datos).
