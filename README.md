@@ -6,6 +6,7 @@ Modelo para la competencia Kaggle [https://www.kaggle.com/competitions/pkdd-15-p
 ## Entregas
 
 ### Fase-1:
+1. Abrir el archivo fase-1.ipynb en colab
 1. Guardar la key de kaggle llamada kaggle.json (Es la que te permite autentificarte y descargar la información del modelo) en la carpeta de archivos de colab.
 
    ![image](https://github.com/user-attachments/assets/403e93af-9514-4cbf-8c4b-793ea7b01709)
