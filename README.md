@@ -24,6 +24,8 @@ Contenido del repositorio:
 
 ![image](https://github.com/user-attachments/assets/a8f2d06e-7773-4ff7-9833-cbcb3e407de1)
 
+NOTA: El archivo fase-1.pynb se encuentra en la carpeta por ser de la primera entrega pero no aporta ni quita nada para el funcionamiento de esta entrega cuando hablamos del funcionamiento.
+
 Tenemos la carpeta scripts que contiene los scripts:
 - model.py  : Este script realiza lo que pasa en la primera entrega (preparación de datos, uso del modelo escogido y evaluación de modelo).
 - train.py  : Este script se encarga de entrenar los datos del modelo.
