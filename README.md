@@ -10,10 +10,12 @@ Fase-1:
 3. Dar clic en fase-1.ipynb que se encuentra en este github, es el colab en el que se realizó el entrenamiento y la predicción del modelo.
 4. En la previsualización del colab fase-1.ipynb dar clic en open in colab que te dirigirá al colab.
 5. Subir el .zip que has descargado del link del punto 1 a la parte de archivos de colab, en la carpeta content. (Si no lo haces de esta forma no va a funcionar)
+
    ![image](https://github.com/user-attachments/assets/180785c3-b5e0-408d-8a20-927d6a24f7f4)
-6. Cuando haya terminado de cargar el .zip en la carpeta, proceder a correr los códigos de colab de arriba hacia abajo. (Es importante seguir este orden)
-7. El resto de información se encuentran dentro del colab, tanto las descripciones de lo que hace cada celda de código como para que sirve cada paso.
-8. Cuando hayas corrido todas las lineas se generará la predicción para Kaggle en la carpeta content y se llamará submission.csv
+
+7. Cuando haya terminado de cargar el .zip en la carpeta, proceder a correr los códigos de colab de arriba hacia abajo. (Es importante seguir este orden)
+8. El resto de información se encuentran dentro del colab, tanto las descripciones de lo que hace cada celda de código como para que sirve cada paso.
+9. Cuando hayas corrido todas las lineas se generará la predicción para Kaggle en la carpeta content y se llamará submission.csv
 
 
 Fase-2:
@@ -40,18 +42,18 @@ Paso a paso para ejecutar el proyecto:
 
    ![image](https://github.com/user-attachments/assets/08193430-85b2-4781-9179-975144f0df69)
 
-3. Guardar la key de kaggle llamada kaggle.json (Es la que te permite autentificarte y descargar la información del modelo) en la carpeta principal.
+2. Guardar la key de kaggle llamada kaggle.json (Es la que te permite autentificarte y descargar la información del modelo) en la carpeta principal.
 
    ![image](https://github.com/user-attachments/assets/6be967e3-c3f5-4286-9f83-1999d26ee0ed)
 
-5. En la terminal donde se encuentra el proyecto usar el comando que nos permitira construir una imagen Docker usando el Dockerfile que está en el directorio actual (.). El flag -t kaggle_model significa que estamos nombrando a la imagen: kaggle_model.
+3. En la terminal donde se encuentra el proyecto usar el comando que nos permitira construir una imagen Docker usando el Dockerfile que está en el directorio actual (.). El flag -t kaggle_model significa que estamos nombrando a la imagen: kaggle_model.
 
    ```
    docker build -t kaggle_model .
    ```
    ![image](https://github.com/user-attachments/assets/b04d4353-df78-4834-98f2-eb42fe220acf)
 
-6. Luego utilizar el comando que nos permitira ejecutar un contenedor interactivo desde la imagen que hemos construido (kaggle_model)
+4. Luego utilizar el comando que nos permitira ejecutar un contenedor interactivo desde la imagen que hemos construido (kaggle_model)
    comando: docker run -it kaggle_model
    
    ```
@@ -59,7 +61,7 @@ Paso a paso para ejecutar el proyecto:
    ```
    ![image](https://github.com/user-attachments/assets/09388966-f84c-47f6-adf3-745068302e55)
 
-7. Al entrar al contenedor ejecutaremos el script que se encargara de correr el modelo predictivo
+5. Al entrar al contenedor ejecutaremos el script que se encargara de correr el modelo predictivo
    
    ```
    python3 scripts/model.py
@@ -69,7 +71,7 @@ Paso a paso para ejecutar el proyecto:
    
    ![image](https://github.com/user-attachments/assets/0e72ff82-3f5b-46ac-a916-a6c78f5cc1e0)
 
-8. Luego ejecutaremos el script:
+6. Luego ejecutaremos el script:
    
    ```
    python3 scripts/train.py --data_file train_data.csv --model_file model.pkl --overwrite_model
@@ -78,7 +80,7 @@ Paso a paso para ejecutar el proyecto:
    
    ![image](https://github.com/user-attachments/assets/5a4c7d9b-d8e8-4eca-a697-2ff69023b35c)
 
-9. Luego ejecutaremos el script:
+7. Luego ejecutaremos el script:
     
    ```
    python3 scripts/predict.py --input_file test_data_input.csv --model_file model.pkl --predictions_file test_predictions.csv
@@ -88,7 +90,7 @@ Paso a paso para ejecutar el proyecto:
    ![image](https://github.com/user-attachments/assets/64740d77-209c-4c7a-976d-91937ec14a48)
 
 
-11. Ejecutaremos el script:python3 scripts/evaluation.py
+8. Ejecutaremos el script:python3 scripts/evaluation.py
 
    ```
    python3 scripts/evaluation.py
