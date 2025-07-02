@@ -112,3 +112,35 @@ Y en los logs del Docker Desktop del container de docker tendremos una salida si
 
 ![image](https://github.com/user-attachments/assets/4d3f4875-f614-47c4-9e59-4003edb442fe)
 
+### Fase-3:
+Contenido de la carpeta fase-3:
+
+![image](https://github.com/user-attachments/assets/41659755-a864-4e95-bb50-18c71f4efc86)
+
+Tenemos la carpeta scripts que contiene los scripts:
+- model.py  : Este script realiza lo que pasa en la primera entrega (preparación de datos).
+- train.py  : Este script se encarga de entrenar los datos del modelo.
+- predict.py : Este script se encarga de hacer las predicciones.
+- evaluation.py  : Carga las predicciones y los valores reales desde archivos CSV, compara si cada par de predicción y valor real son "casi iguales" (dentro de una tolerancia), imprime la precisión como promedio de aciertos por fila.
+
+Tenemos el archivo dockerfile que me permite construir la imagen docker para el proyecto, con:
+- Python 3.11.
+- Todas las dependencias necesarias.
+- Scripts (model.py, predict.py, evaluation.py, etc.) dentro del contenedor.
+
+Tenemos el archivo requirements.txt que contiene las dependencias necesarias para ejecutar el proyecto.
+
+Paso a paso para ejecutar el proyecto:
+
+1. Descargar el .zip o clonar el repositorio con toda la información necesaria para el modelo dockerizado.
+
+   ![image](https://github.com/user-attachments/assets/08193430-85b2-4781-9179-975144f0df69)
+
+2. Guardar la key de kaggle llamada kaggle.json (Es la que te permite autentificarte y descargar la información del modelo) en la carpeta principal.
+
+   ![image](https://github.com/user-attachments/assets/6be967e3-c3f5-4286-9f83-1999d26ee0ed)
+
+NOTA: La key debe llamarse exactamente como se ve en la imagen
+
+3. En la terminal donde se encuentra el proyecto usar el comando que nos permitira construir una imagen Docker usando el Dockerfile que está en el directorio actual (.).
+
