@@ -166,7 +166,7 @@ Paso a paso para ejecutar el proyecto:
 
    ![image](https://github.com/user-attachments/assets/6133f8e5-8508-4268-b854-417664e53caf)
 
-Finalmente al hacer las pruebas en postman se debería ver como algo así:
+Finalmente al hacer las pruebas en postman se debería ver algo como esto:
 
 - http://localhost:5001/train
   
