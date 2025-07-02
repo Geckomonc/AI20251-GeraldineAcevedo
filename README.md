@@ -144,9 +144,16 @@ Paso a paso para ejecutar el proyecto:
 
 2. Guardar la key de kaggle llamada kaggle.json (Es la que te permite autentificarte y descargar la información del modelo) en la carpeta principal.
 
-   ![image](https://github.com/user-attachments/assets/6be967e3-c3f5-4286-9f83-1999d26ee0ed)
+   ![image](https://github.com/user-attachments/assets/409128a6-720b-4cd4-b1fb-cc69367f627a)
 
 NOTA: La key debe llamarse exactamente como se ve en la imagen
 
 3. En la terminal donde se encuentra el proyecto usar el comando que nos permitira construir una imagen Docker usando el Dockerfile que está en el directorio actual (.).
+   ```
+   docker build -t api-rest .
+   ```
 
+4. ss
+      ```
+   docker run -p 5001:5001 api-rest
+   ```
