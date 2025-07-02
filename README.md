@@ -122,12 +122,14 @@ Tenemos la carpeta scripts que contiene los scripts:
 - train.py  : Este script se encarga de entrenar los datos del modelo.
 - predict.py : Este script se encarga de hacer las predicciones.
 - evaluation.py  : Carga las predicciones y los valores reales desde archivos CSV, compara si cada par de predicción y valor real son "casi iguales" (dentro de una tolerancia), imprime la precisión como promedio de aciertos por fila.
-- apirest.py :
-- client.py :
+- apirest.py: Este script se encarga de implementar una API REST con Flask. Expone dos endpoints:
+  - /train: reentrena el modelo al recibir una petición GET.
+  - /predict: recibe un JSON con features y devuelve la predicción del modelo.
+- client.py :  Cliente HTTP para probar los endpoints /train y /predict mediante peticiones programadas con requests.
   
 Los archivos
-- model.pkl :
-- train_data.csv :
+- model.pkl : Archivo binario que contiene el modelo entrenado con scikit-learn.
+- train_data.csv : Archivo generado por model.py que contiene las características y las etiquetas de entrenamiento utilizadas para entrenar el modelo.
   
 Tenemos el archivo dockerfile que me permite construir la imagen docker para el proyecto, con:
 - Python 3.11.
@@ -146,14 +148,41 @@ Paso a paso para ejecutar el proyecto:
 
    ![image](https://github.com/user-attachments/assets/409128a6-720b-4cd4-b1fb-cc69367f627a)
 
-NOTA: La key debe llamarse exactamente como se ve en la imagen
+   NOTA: La key debe llamarse exactamente como se ve en la imagen
 
-3. En la terminal donde se encuentra el proyecto usar el comando que nos permitira construir una imagen Docker usando el Dockerfile que está en el directorio actual (.).
+3. Construir la imagen Docker con el siguiente comando:
    ```
    docker build -t api-rest .
    ```
+   Este comando crea una imagen llamada api-rest utilizando el Dockerfile ubicado en el directorio actual. Se instalarán las dependencias necesarias y se copiarán todos los archivos al     contenedor.
+   
+   ![image](https://github.com/user-attachments/assets/730d30a2-b570-4019-a7be-3aef8256c9c5)
 
-4. ss
+4. Ejecutar el contenedor y exponer la API en el puerto 5001:
       ```
    docker run -p 5001:5001 api-rest
    ```
+   Este comando inicia el contenedor con la API REST en ejecución. Podrás acceder a los endpoints http://localhost:5001/train y http://localhost:5001/predict.
+
+   ![image](https://github.com/user-attachments/assets/6133f8e5-8508-4268-b854-417664e53caf)
+
+Finalmente al hacer las pruebas en postman se debería ver como algo así:
+
+- http://localhost:5001/train
+  
+![image](https://github.com/user-attachments/assets/3d15795a-916b-4c73-9042-d2a1f9ebac12)
+
+- http://localhost:5001/predict
+  
+Escoger en body la opción raw
+
+json hipotético
+{
+  "features": [1, 0, 0, 1, 0, 0, -8.611, 41.145, 0.005, 0.003]
+}
+
+![image](https://github.com/user-attachments/assets/84a33141-d1bc-48e5-8f49-953b62be26a3)
+
+Nota: Recuerde colocar en el body de la petición el json y escoger raw, como se ve en la imagen.
+
+
