@@ -26,6 +26,12 @@ Tenemos la carpeta scripts que contiene los scripts:
 - train.py  : Este script se encarga de entrenar los datos del modelo.
 - predict.py : Este script se encarga de hacer las predicciones.
 - evaluation.py  : Carga las predicciones y los valores reales desde archivos CSV, compara si cada par de predicción y valor real son "casi iguales" (dentro de una tolerancia), imprime la precisión como promedio de aciertos por fila.
+- apirest.py :
+- client.py :
+  
+Los archivos
+- model.pkl :
+- train_data.csv :
 
 Tenemos el archivo dockerfile que me permite construir la imagen docker para el proyecto, con:
 - Python 3.11.
@@ -115,7 +121,7 @@ Y en los logs del Docker Desktop del container de docker tendremos una salida si
 ### Fase-3:
 Contenido de la carpeta fase-3:
 
-![image](https://github.com/user-attachments/assets/41659755-a864-4e95-bb50-18c71f4efc86)
+![image](https://github.com/user-attachments/assets/e6509e33-1186-484b-8345-7e74ddb64a23)
 
 Tenemos la carpeta scripts que contiene los scripts:
 - model.py  : Este script realiza lo que pasa en la primera entrega (preparación de datos).
